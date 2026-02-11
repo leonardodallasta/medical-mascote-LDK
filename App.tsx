@@ -37,42 +37,42 @@ function App() {
   // Check for notifications
   // Note: On iOS PWA, background notifications (when app is closed) require Push API + Backend.
   // This local check works when app is open or recently backgrounded.
-  useEffect(() => {
-    if (Notification.permission !== 'granted') return;
+//   useEffect(() => {
+//     if (Notification.permission !== 'granted') return;
 
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const currentHM = `${hours}:${minutes}`;
-    const dayOfWeek = now.getDay();
+//     const now = new Date();
+//     const hours = String(now.getHours()).padStart(2, '0');
+//     const minutes = String(now.getMinutes()).padStart(2, '0');
+//     const currentHM = `${hours}:${minutes}`;
+//     const dayOfWeek = now.getDay();
 
-    medicines.forEach(med => {
-        if (med.time === currentHM && med.daysOfWeek.includes(dayOfWeek)) {
-            // Check if already taken today
-            const isTaken = logs.some(l => {
-                const d = new Date(l.takenAt);
-                return l.medicineId === med.id && 
-                       d.getDate() === now.getDate() &&
-                       d.getMonth() === now.getMonth() &&
-                       d.getFullYear() === now.getFullYear();
-            });
+//     medicines.forEach(med => {
+//         if (med.time === currentHM && med.daysOfWeek.includes(dayOfWeek)) {
+//             // Check if already taken today
+//             const isTaken = logs.some(l => {
+//                 const d = new Date(l.takenAt);
+//                 return l.medicineId === med.id && 
+//                        d.getDate() === now.getDate() &&
+//                        d.getMonth() === now.getMonth() &&
+//                        d.getFullYear() === now.getFullYear();
+//             });
 
-            if (!isTaken) {
-                try {
-                    // Unique tag prevents spamming the same notification
-                    const tag = `med-${med.id}-${now.toDateString()}-${currentHM}`;
-                    new Notification(`✨ Dia Leve`, {
-                        body: `Psiu! ${gender === 'female' ? 'A sua mascote' : 'O seu mascote'} tá esperando! Hora do ${med.name}.`,
-                        icon: '/vite.svg',
-                        tag: tag
-                    });
-                } catch (e) {
-                    console.error("Failed to send notification", e);
-                }
-            }
-        }
-    });
-  }, [currentTime, medicines, logs, gender]);
+//             if (!isTaken) {
+//                 try {
+//                     // Unique tag prevents spamming the same notification
+//                     const tag = `med-${med.id}-${now.toDateString()}-${currentHM}`;
+//                     new Notification(`✨ Dia Leve`, {
+//                         body: `Psiu! ${gender === 'female' ? 'A sua mascote' : 'O seu mascote'} tá esperando! Hora do ${med.name}.`,
+//                         icon: '/vite.svg',
+//                         tag: tag
+//                     });
+//                 } catch (e) {
+//                     console.error("Failed to send notification", e);
+//                 }
+//             }
+//         }
+//     });
+//   }, [currentTime, medicines, logs, gender]);
 
   // Initialize Dark Mode and Gender Correctly
   useEffect(() => {

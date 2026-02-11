@@ -13,12 +13,16 @@ const FUN_MESSAGES = [
   "Oi coisa linda, vê se toma seu remédio hein! ❤️",
   "Alô? É da central de saúde? Tão mandando você se cuidar! 📞",
   "Seu mascote tá te julgando... hora do remédio! 👀",
-  "Para tudo o que tá fazendo e pega água! 💧",
-  "Um brinde à saúde (com água e remédio)! 🥂",
+  "Para tudo o que tá fazendo e pega água e uma fruta! 💧",
+  "O Arrascaeta estaria tomando o remédio em",
   "Não me obrigue a notificar de novo... 😤",
   "Bora ficar saudável pra aguentar a semana! 💪",
-  "Você prometeu que ia se cuidar, lembra? 🤔",
-  "Dinheiro não compra saúde, mas esse lembrete é grátis! 💸"
+  "O Felipe Luís também tomaria...",
+  "OW CABEÇÃO!! ta na hora",
+  "O museu de Louvre não seria nada sem você tomando remédio",
+  "Desejo pra você tudo de bom e de melhor nessa vida: eu.",
+  "Você não cansa não? De carregar a beleza do mundo inteiro.",
+  "Alguém sabe um remédio bom, pra aquela coisa chamada saudade dela?",
 ]
 
 Deno.serve(async (req) => {

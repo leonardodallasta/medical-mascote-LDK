@@ -182,13 +182,18 @@ function App() {
     return (now.getTime() - medTime.getTime()) / (1000 * 60 * 60) > 1;
   };
 
-  const getMascotMessage = () => {
+const getMascotMessage = () => {
     const todayIdx = new Date().getDay();
     const requiredToday = medicines.filter(m => m.daysOfWeek.includes(todayIdx));
     const allTakenToday = requiredToday.length > 0 && requiredToday.every(m => !!getTodayLog(m.id));
 
-    if (allTakenToday) return "Tudo pago por hoje! É sobre isso!";
+    // Se tudo foi tomado, pegamos uma mensagem aleatória da lista HAPPY
+    if (allTakenToday) {
+      const happyMessages = MASCOT_MESSAGES[MascotStatus.HAPPY];
+      return happyMessages[Math.floor(Math.random() * happyMessages.length)];
+    }
     
+    // Se não, pegamos baseada no status atual (Concerned, Sick, etc)
     const messages = MASCOT_MESSAGES[status];
     return messages[Math.floor(Math.random() * messages.length)];
   };

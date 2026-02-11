@@ -1,0 +1,7 @@
+{
+  "name": "MediPal Mascote",
+  "description": "A comprehensive medication tracker with an emotional mascot companion.",
+  "requestFramePermissions": [
+    "notifications"
+  ]
+}

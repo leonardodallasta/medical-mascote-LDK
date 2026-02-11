@@ -4,7 +4,7 @@ export const APP_NAME = "MediPal";
 
 export const MASCOT_MESSAGES: Record<MascotStatus, string[]> = {
   [MascotStatus.HAPPY]: [
-    "O pai tá on e roteando!",
+    "A mãe tá on e roteando!",
     "Receba! Saúde em dia!",
     "Sextou? Não, tomou!",
     "Aí eu vi vantagem!",
@@ -14,6 +14,13 @@ export const MASCOT_MESSAGES: Record<MascotStatus, string[]> = {
     "Quem toma não passa aperto.",
     "Hoje eu durmo tranquilo.",
     "Eu sabia que você não ia falhar!",
+    "#PAZ",
+    "Linda como sempre",
+    "Sabe muito!",
+    "Habla mesmo (com saúde)!",
+    "Orgulho da OMS em",
+    "Zero B.O. por aqui",
+    "Segura essa saúde monstra!"
   ],
   [MascotStatus.CONCERNED]: [
     "Não esquece de tomar o remédio, cabeção",
@@ -21,9 +28,15 @@ export const MASCOT_MESSAGES: Record<MascotStatus, string[]> = {
     "E aí fake natty, vai tomar não?",
     "Não esquece de mim não...",
     "Tô de olho hein...",
-    "Não deixa a peteca cair...",
+    "Meteu essa de esquecer?",
     "Não me deixa no vácuo não...",
     "Eu acredito em você, vai lá!",
+    "To meio nhé, mas você consegue",
+    "Tô só te julgando silenciosamente...",
+    "Assim você quebra minhas pernas.",
+    "Não esquece de tomar o remédio, cabeção",
+    "Aí é loucura...",
+    "Não é assim que o Arrascaeta faria..."
   ],
   [MascotStatus.SICK]: [
     "Tô só o pó da rabiola...",
@@ -42,6 +55,7 @@ export const MASCOT_MESSAGES: Record<MascotStatus, string[]> = {
     "Tá doendo até a alma...",
     "Esse plot não tá legal...",
     "O clima tá pesado...",
+    "Pane no sistema alguém me desconfigurou"
   ],
   [MascotStatus.CRITICAL]: [
     "Vou de arrasta pra cima...",
@@ -52,7 +66,7 @@ export const MASCOT_MESSAGES: Record<MascotStatus, string[]> = {
     "Foi de base.",
     "Foi de Vasco.",
     "Foi de Americanas.",
-    "R.I.P. (Tome o remédio para reviver)",
+    "R.I.P.",
     "Foi de link na bio.",
     "Foi de CLT.",
     "Foi de modo anônimo.",
